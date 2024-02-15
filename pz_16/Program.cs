@@ -129,7 +129,7 @@
                 if (PlayerHp > 0 && enemycount != 10)
                 {
                     Console.SetCursorPosition(1, 27);
-                    Console.Write($"Здоровье игрока: {PlayerHp}");//вывод здоровья игрока
+                    Console.Write($"Здоровье игрока: {PlayerHp.ToString("D2")}");//вывод здоровья игрока
                     Console.SetCursorPosition(1, 28);
                     Console.Write($"Сила игрока: {PlayerPower}");//вывод силы удара игрока
                     Console.SetCursorPosition(1, 29);
@@ -279,14 +279,18 @@
         {
             Console.Clear();
             Console.SetCursorPosition(40, 14);
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Вы проиграли");
+            Console.ReadLine();
         }
 
         static void Win()
         {
             Console.Clear();
             Console.SetCursorPosition(40, 14);
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Вы выиграли");
+            Console.ReadLine();
         }
 
         static void Escape()//метод выхода из игры
